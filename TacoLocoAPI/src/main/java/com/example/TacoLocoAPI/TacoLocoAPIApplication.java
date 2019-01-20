@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class TacoLocoAPIApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(TacoLocoAPIApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(TacoLocoAPIApplication.class, args);
+	}
 }

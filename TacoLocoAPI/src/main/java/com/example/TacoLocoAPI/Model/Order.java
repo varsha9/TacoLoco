@@ -8,22 +8,23 @@ package com.example.TacoLocoAPI.Model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
+ *
  * @author SriVarshaKantheti
  */
 public class Order {
 
     /**
      * {
-     * "veggieTaco" : 1,
-     * "chickenTaco" : 1,
-     * "beefTaco": 0,
-     * "chorizoTaco": 1
-     * }
-     * <p>
-     * RAW
-     * FORMAT : JSON
+	"veggieTaco" : 1,
+	"chickenTaco" : 1,
+	"beefTaco": 0,
+        "chorizoTaco": 1
+        }
+        * 
+        * RAW
+        * FORMAT : JSON
      */
-
+    
     //variables to store the price of each tacos
     private final double VEGGIE_TACO_PRICE = 2.5;
     private final double CHICKEN_TACO_PRICE = 3.0;
@@ -59,15 +60,14 @@ public class Order {
 
     /**
      * Returns the order total of the Taco's
-     *
-     * @return
+     * @return 
      */
     public double getOrderTotal() {
         //gets the total sum of taco's ordered
         int totalOrderedTacos = veggieTaco + chickenTaco + beefTaco + chorizoTaco;
         //stores the discount price
         double discount = 0;
-
+        
         //tests if the total quantity of taco's ordered is greater or equal to 4.
         //if true, it sets the discount variable to 20%
         if (totalOrderedTacos >= 4) {
@@ -85,10 +85,10 @@ public class Order {
 
         //calculates the total sum of the taco's ordered
         double sumTotal = totalVeggie + totalChicken + totalBeef + totalChorizo;
-
+        
         //calculates the discount
         double discounted_price = sumTotal - (discount * sumTotal);
-
+        
         return discounted_price;
     }
 
@@ -96,6 +96,7 @@ public class Order {
     public String toString() {
         return "Order{" + "veggieTaco=" + veggieTaco + ", chickenTaco=" + chickenTaco + ", beefTaco=" + beefTaco + ", chorizoTaco=" + chorizoTaco + '}';
     }
-
+    
+    
 
 }
